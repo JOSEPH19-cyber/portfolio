@@ -1,0 +1,348 @@
+*{
+  padding: 0;
+  margin : 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(30, 30, 30, 1);
+  color:  rgb(255, 215, 0);
+}
+
+
+/*_________________________________________________________________________________*/
+/* HEADER */
+header{
+  margin-bottom: 100px;
+  position: fixed;
+  width: 100%;
+}
+/* Disposition de mon header  */
+.header-container{
+  background-color: rgb(255, 215, 0);
+  width: 100%;
+  height: 10vh;
+  color: rgb(0, 0, 0);
+  max-width: 1200px;
+  margin: auto; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+/* Disposition de ma nav */ 
+.nav-list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+/* enlever les puces des listes */
+.nav-list li{
+  list-style-type: none;
+}
+/* enlever les soulignements des liens */
+.nav-list a{
+  text-decoration: none;
+}
+/*changer la couleur des liens losrsqu'on passe la souris dessus */
+.nav-list a{
+  color: rgba(30, 30, 30, 1);
+}
+.nav-list a:hover{
+  color : white;
+}
+@media screen and (max-width: 600px){
+  header h1{
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px){
+  
+}
+/*_________________________________________________________________________*/
+
+
+
+/*__________________________________________________________________________*/
+/*SECTION A PROPOS */
+#about{
+  margin-bottom: 100px;
+  padding-top: 70px;
+}
+#about h1{
+  margin-bottom: 50px;
+  text-align: center;
+}
+.about-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.left{
+  background-color:  rgba(30, 30, 30, 1);
+  text-align: center;
+  height: 45vh;
+  width: 40vw;
+  border: 1px solid black;
+  border-radius: 10%;
+  padding: 0.6rem;
+  font-size: 0.69rem;
+  box-shadow: 1px 1px 3px rgb(255, 215, 0);
+}
+.right{
+  height: 50vh;
+  width: 40vw;
+  border: 1px solid black;
+  border-radius: 10%;
+  box-shadow: 1px 1px 3px rgb(255, 215, 0);
+}
+.right img{
+  height: 100%;
+  width: 100%;
+  border-radius: 10%;
+}
+.right, .left{
+  transition: box-shadow 0.3s ease-in-out;
+}
+.right:hover, .left:hover{
+  box-shadow:  5px 5px 5px rgb(255, 215, 0);
+}
+@media screen and (max-width: 600px) {
+  .left{
+    font-size: 0.48rem;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 768px){
+  .left{
+    font-size: 0.5rem;
+  }
+}
+/*__________________________________________________________________________*/
+
+
+
+/*_______________________________________________________________________________*/
+#projects{
+  margin-bottom: 100px;
+  padding-top: 60px;
+}
+#projects h1{
+  margin-bottom: 50px;
+  text-align: center;
+}
+.projects-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.project-card{
+  background-color: rgba(30, 30, 30, 1);
+  height: 75vh;
+  width: 25vw;
+  border: 2px solid black;
+  border-radius: 10%;
+  padding: 0.8rem;
+}
+.project-card img{
+  height: 35vh;
+  width: 100%;
+  border-bottom: 2px solid black;
+  border-radius: 10%;
+  transition: box-shadow 0,3s ease-in-out;
+}
+.project-card img:hover{
+  box-shadow: 5px 5px 5px rgb(255, 215, 0);
+}
+@media screen and (max-width: 600px) {
+  .project-card{
+    height: 60vh;
+    width: 40vw;
+    font-size: 0.65rem;
+  }
+}
+@media screen and (min-width: 681px) and (max-width: 768px){
+  .project-card{
+    height: 60vh;
+    width: 40vw;
+    font-size: 0.7rem;
+  }
+}
+/*________________________________________________________________________________*/
+
+
+
+/*____________________________________________________________________________________*/
+
+/* Section skills */
+#skills{
+  margin-bottom: 100px;
+  padding-top: 60px;
+}
+#skills h1{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.skills-content{
+  display: flex;
+  flex-direction: column;
+}
+/* langage barre de progression pourcentage*/ 
+.skill{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.skill p, .skill span{
+  width: 20%;
+}
+/* Disposition du container des langages */
+.skill-bar{
+  width: 50vw;
+  height: 5vh;
+  border: 2px solid black;
+}
+/* Gérer la coleur et la hauteur des langages*/
+.skill-level{
+  height: 100%;
+  background-color: rgb(255, 215, 0);
+}
+/* Barre de progression */
+.skill-level.html{
+  width: 80%;
+}
+.skill-level.css{
+  width: 60%;
+}
+.skill-level.js{
+  width: 60%;
+}
+.skill-level.php{
+  width: 50%;
+}
+.skill-level.sql{
+  width: 55%;
+}
+.skill-level.python{
+  width: 55%;
+}
+.skill-level.c{
+  width: 50%;
+}
+/*_____________________________________________________________________________*/
+
+
+/*__________________________________________________________________*/
+
+/* section contact*/
+#contact{
+  width: 100%;
+  height: 800px;
+  text-align: center;
+  margin-bottom: 100px;
+  padding-top: 60px;
+}
+#contact h1{
+  margin-bottom: 100px;
+}
+form{
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+form input{
+  width: 80%;
+  height: 50px;
+  border-radius: 5px;
+}
+form textarea{
+  width: 80%;
+  height: 120px;
+  border-radius: 5px;
+}
+input[type="submit"] {
+  width: 10%;
+  max-width: 150px;
+}
+@media screen and (max-width: 600px){
+  input[type="submit"] {
+  width: 15%;
+}
+}
+/*___________________________________________________________________________*/
+
+
+/*___________________________________________________________________________*/
+
+/* FOOTER */
+/* Disposer mon footer*/ 
+footer {
+  width: 100%;
+  min-height: 10vh;
+  background-color: rgb(255, 215, 0);
+  padding: 1rem 0;
+  color:  rgba(30, 30, 30, 1);
+}
+/* Disposer mon container flexbox */
+.footer-content{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* Mettre mes icônes réseaux sociaux à droite */
+.footer-right{
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+/* agrandir la taille de mes icônes */
+.footer-right i {
+  font-size: 2rem;
+  color: rgba(30, 30, 30, 1);
+}
+/* Donner une taille au paragraphe de mon footer */
+.footer-content p {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+/* Donner un effet de survol à mes icônes */
+.footer-right a{
+  transition: box-shadow 0.3s ease-in-out;
+}
+.footer-right a:hover{
+  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+  color: black;
+}
+/* media queris */
+@media  screen and (max-width: 600px) {
+  .footer-right{
+    width: 100%;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+  .footer-content p{
+    min-height: 3vh;
+    margin-left: 4rem;
+  }
+}
+
