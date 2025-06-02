@@ -280,63 +280,127 @@ header{
 /*____________________________________________________________________________________*/
 
 /* Section skills */
-#skills{
+#skills {
   margin-bottom: 100px;
   padding-top: 60px;
 }
-#skills h1{
+
+#skills h1 {
   text-align: center;
   margin-bottom: 50px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.skills-content{
+
+.skills-content {
   display: flex;
   flex-direction: column;
-}
-/* langage barre de progression pourcentage*/ 
-.skill{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  gap: 2rem;
   align-items: center;
 }
-.skill p, .skill span{
-  width: 20%;
+
+/* Chaque ligne de compétence */
+.skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  gap: 1rem;
 }
-/* Disposition du container des langages */
-.skill-bar{
-  width: 50vw;
-  height: 5vh;
+
+/* Texte à gauche (langage) et à droite (pourcentage) */
+.skill p, .skill span {
+  width: 10%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Barre de progression */
+.skill-bar {
+  flex: 1;
+  height: 25px;
+  background-color: #111;
+  border-radius: 20px;
+  overflow: hidden;
   border: 2px solid black;
 }
-/* Gérer la coleur et la hauteur des langages*/
-.skill-level{
+
+/* Niveau de compétence (remplissage de la barre) */
+.skill-level {
   height: 100%;
   background-color: rgb(255, 215, 0);
+  border-radius: 20px 0 0 20px;
+  transition: width 0.6s ease-in-out;
 }
-/* Barre de progression */
-.skill-level.html{
-  width: 80%;
+
+/* Pourcentages individuels */
+.skill-level.html    { width: 80%; }
+.skill-level.css     { width: 60%; }
+.skill-level.js      { width: 60%; }
+.skill-level.php     { width: 50%; }
+.skill-level.sql     { width: 55%; }
+.skill-level.python  { width: 55%; }
+.skill-level.c       { width: 50%; }
+
+@media screen and (max-width: 1024px) {
+  .skills-content {
+    gap: 1.5rem;
+  }
+
+  .skill {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .skill p,
+  .skill span {
+    width: 15%;
+    font-size: 0.95rem;
+  }
+
+  .skill-bar {
+    height: 20px;
+    border-width: 1.5px;
+  }
+
+  .skill-level {
+    height: 100%;
+  }
 }
-.skill-level.css{
-  width: 60%;
+@media screen and (max-width: 768px) {
+  .skills-content {
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .skill {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .skill p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .skill-bar {
+    width: 80%;
+    height: 18px;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill span {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+  }
 }
-.skill-level.js{
-  width: 60%;
-}
-.skill-level.php{
-  width: 50%;
-}
-.skill-level.sql{
-  width: 55%;
-}
-.skill-level.python{
-  width: 55%;
-}
-.skill-level.c{
-  width: 50%;
-}
+
 /*_____________________________________________________________________________*/
 
 
