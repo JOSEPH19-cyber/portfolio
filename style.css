@@ -6,6 +6,7 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: rgba(30, 30, 30, 1);
   color:  rgb(255, 215, 0);
+  overflow-x: hidden;
 }
 
 
@@ -70,9 +71,29 @@ header h1 {
   .hamburger-icon {
     display: flex;
     margin-right: 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
   .nav-list{
     display: none;
+  }
+}
+@media screen and (max-width: 550px){
+  header h1{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+}@media screen and (max-width: 550px) {
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 90vw;
+    word-break: break-word;
+  }
+
+  header {
+    padding: 0.5rem 0;
   }
 }
 
