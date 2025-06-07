@@ -59,12 +59,24 @@ header h1 {
   display: none;
 }
 
+@media screen and (min-width: 769px) and (max-width: 900px){
+  header h1{
+    font-size: 1.8rem;
+  }
+  .nav-list{
+    gap: 1.5rem;
+  }
+  .nav-list a{
+    font-size: 1rem;
+  }
+  .header-container {
+    padding: 0.5rem 1rem;
+  }
+
+}
 @media screen and (min-width: 769px) {
   .hamburger-icon {
     display: none !important;
-  }
-
-  .nav-list {
   }
 }
 @media screen and (max-width: 768px) {
@@ -74,16 +86,58 @@ header h1 {
     font-size: 1.5rem;
     cursor: pointer;
   }
-  .nav-list{
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .nav-list {
     display: none;
+    flex-direction: column;
+    background-color: rgb(255, 215, 0);
+    height: auto;
+    width: auto;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    gap: 0.5rem;
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-list li {
+    text-align: right;
+  }
+
+  .nav-list a {
+    font-size: 1rem;
+    color: rgba(30, 30, 30, 1);
+  }
+
+  .header-container.show {
+    position: relative;
+  }
+
+  .navbar.show {
+    margin-top: 1rem;
+  }
+
+  .nav-list.show {
+    display: flex;
   }
 }
+
 @media screen and (max-width: 550px) {
   header h1 {
     font-size: 1.5rem;
     text-align: center;
     max-width: 90vw;
     word-break: break-word;
+    line-height: 1.3;
   }
 
   header {
@@ -101,7 +155,7 @@ header h1 {
   .hamburger-icon {
     font-size: 1rem;
   }
-}
+} 
 
 /*_________________________________________________________________________*/
 
